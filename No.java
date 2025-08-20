@@ -6,7 +6,7 @@
         this(dado, null);
     }
 
-    public No(T dado, NO<T> no){
+    public No(T dado, No<T> no){
         this.dado = dado;
         this.nextNo = no;
     }
@@ -19,12 +19,17 @@
         this.dado = dado;
     }
 
-    public No<T> getNo(){
+    public No<T> getNextNo(){
         return this.nextNo;
     }
 
-    public void setNo(No<T> nextNo){
+    public void setNextNo(No<T> nextNo){
         this.nextNo = nextNo;
+    }
+
+    @Override
+    public String toString(){
+        return "Dado{" + getDado()+ "}";
     }
 
 }
